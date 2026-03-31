@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,13 @@
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "mysql2": "^3.20.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanraj1905/Fresh-Mart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devanraj1905/Fresh-Mart/issues"
+  },
+  "homepage": "https://github.com/devanraj1905/Fresh-Mart#readme"
 }
