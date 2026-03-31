@@ -233,6 +233,8 @@ h3 {
 
 .card-item {
     display: flex;
+    flex-direction: column;
+    
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -246,6 +248,7 @@ h3 {
 
 .card-item div {
     display: flex;
+    
     align-items: center;
     justify-content: center;
     margin: 0 20px;
@@ -307,4 +310,7 @@ h3 {
     input {
         width: 100%;
     }
+}
+.card-item div{
+    margin: 20px;
 }

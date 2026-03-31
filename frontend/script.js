@@ -59,7 +59,7 @@ async function loadproduct() {
     }
 }
 
-
+    
 loadproduct()
 document.getElementById('search-product').addEventListener('input', function () {
     const searchItem = this.value.toLowerCase()
