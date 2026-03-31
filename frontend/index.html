@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Mart</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/628/628283.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <h1><i class="fa-brands fa-pagelines"></i>Fresh Mart</h1>
+            <div class="nav-right">
+            <button   class="product btn-show">Products</button>
+            <button  class="cart btn-show">
+                <span id="cardCount">0</span><i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button class="btn-show" onclick="loadOrders()">Orders</button>
+            </div>
+        </nav>
+    </div>
+        <h2 class="welcome">Welcome </h2>
+       
+    <div id="product-page" class="page active">
+         <input type="text" id="search-product" placeholder="Search">
+        <h2 class="av-product">Available Product</h2>
+        <div id="productList"></div>
+
+
+        
+    </div>
+    <div id="card-page" class="page ">
+        <input class="inputBox" type="text" placeholder="Customer Name">
+        <h2 class="card" >Your card</h2>
+        <div id="cardlist"></div>
+        
+        <h3 class="total">Total : ₹0</h3>
+        <button class="placeOrder" onclick="placeOrder()"><i class="fa-solid fa-rocket"></i>Placeorder</button>
+    </div>
+    <div id="order-page" class="page">
+        <h2>Order History</h2>
+        <div id="orderlist">Order List</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

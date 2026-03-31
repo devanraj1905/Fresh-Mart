@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(120deg, #eef2f7, #f8fafc);
+    min-height: 100vh;
+}
+
+
+
+.header {
+    background: linear-gradient(135deg, #0ea5e9, #2564ebe8);
+    padding: 20px 60px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+
+
+nav button {
+    background: hsl(0, 0%, 100%);
+    color: #1d4ed8;
+    border: none;
+    padding: 10px 22px;
+    margin-left: 12px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+nav button:hover {
+    background: #1d4ed8;
+    color: white;
+}
+
+
+
+.cart {
+    position: relative;
+}
+
+#cardCount {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: crimson;
+    color: white;
+    font-size: 11px;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+
+
+.page {
+    display: none;
+    padding: 40px 60px;
+    animation: fadeIn 0.4s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.welcome {
+
+    text-align: center;
+    margin-top: 20px;
+    color: #059669;
+}
+
+
+#productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.av-product {
+
+    margin-bottom: 10px;
+}
+
+#search-product {
+    display: flex;
+    justify-self: center;
+    width: 500px;
+
+}
+
+.product-card {
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+
+.product-card span {
+    font-weight: bold;
+    color: #047dcd;
+}
+
+
+
+.product-card button {
+    margin-top: 12px;
+    width: 100%;
+    background: #058fff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product-card button:hover {
+    background: #006dc7;
+
+}
+
+
+
+#cardlist {
+
+    padding: 25px;
+    border-radius: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    width: 280px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+
+
+h3 {
+    margin-bottom: 18px;
+    color: #1e293b;
+}
+
+
+
+.placeOrder {
+    background: #058fff;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.placeOrder:hover {
+    background: #2563eb;
+}
+
+
+
+#orderlist {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: large;
+    background-color: #c7e3ffd2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+.card-item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.card-item div p {
+    margin: 0 10px;
+}
+
+.remove-btn {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+}
+
+.inc-btn,
+.dec-btn {
+    padding: 10px;
+    border-radius: 100%;
+    border: none;
+
+
+
+}
+
+.orderlist-child {
+    background-color: #c7e3ffd2;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@media(max-width:768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-right button {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .page {
+        padding: 25px;
+    }
+
+    #search-product {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+}
