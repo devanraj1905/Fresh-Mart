@@ -287,9 +287,27 @@ h3 {
     border-radius: 10px;
 }
 
+.loader {
+  border: 6px solid #e5e7eb;
+  border-top: 6px solid #2563eb;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+  display: block;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 @media(max-width:768px) {
-
+    .header{
+        position: relative;
+    }
     nav {
         flex-direction: column;
         gap: 10px;
@@ -305,7 +323,10 @@ h3 {
     }
 
     #search-product {
+        position: sticky;
+        top: 0;
         width: 100%;
+        z-index: 100;
     }
 
     input {
