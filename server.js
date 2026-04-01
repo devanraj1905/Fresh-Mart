@@ -7,7 +7,7 @@ const PORT = process.env.PORT||3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('frontend'));
+app.use(express.static('frontend'));        
 
 // ✅ GET all products
 app.get('/products', (req, res) => {
