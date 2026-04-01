@@ -48,7 +48,7 @@ function displayProducts(products) {
 let allProduct = []
 async function loadproduct() {
     try {
-        const response = await fetch('http://localhost:3000/products')
+        const response = await fetch('https://fresh-mart-5um5.onrender.com/products')
         console.log('Status:', response.status) 
         const data = await response.json()
         console.log('Data:', data)              
@@ -172,7 +172,7 @@ async function placeOrder() {
         }
         const calculate = card.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
-        const response = await fetch("http://localhost:3000/orders", {
+        const response = await fetch('https://fresh-mart-5um5.onrender.com/orders', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -196,7 +196,7 @@ async function placeOrder() {
     }
 }
 async function loadOrders() {
-    const response = await fetch("http://localhost:3000/orders")
+    const response = await fetch('https://fresh-mart-5um5.onrender.com/orders')
     const orders = await response.json()
     const orderList = document.getElementById('orderlist')
 
