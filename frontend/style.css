@@ -82,6 +82,11 @@ nav button:hover {
     display: block;
    
 }
+nav button.active-btn {
+    background: #1d4ed8;
+    color: white;
+    
+}
 
 
 
@@ -234,9 +239,7 @@ h3 {
 
 .card-item {
     display: flex;
-    flex-direction: column;
-    
-    align-items: center;
+     align-items: center;
     justify-content: space-between;
     padding: 20px;
     border-radius: 30px;
@@ -332,7 +335,11 @@ h3 {
     input {
         width: 100%;
     }
+
+.card-item{
+    display: flex;
+    flex-direction: column;
 }
 .card-item div{
     margin: 20px;
-}
+}}

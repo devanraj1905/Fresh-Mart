@@ -6,23 +6,34 @@ let userName=prompt("Enter Your Name ")||"Guest"
 localStorage.setItem('Name',userName)
 welcome.textContent = "Welcome "+ localStorage.getItem('Name')
 
-
 btnShow.forEach((btn, index) => {
-
     btn.addEventListener('click', () => {
+        
         pageSwitch.forEach((page) => {
             page.classList.remove('active')
-
         })
+
+        
+        btnShow.forEach((b) => {
+            b.classList.remove('active-btn')
+        })
+
         if (index === 1) {
             renderCard()
         }
         if (index === 2) {
             loadOrders()
         }
+
         pageSwitch[index].classList.add('active')
+
+        
+        btn.classList.add('active-btn')
     })
 })
+
+// Set first button active by default
+btnShow[0].classList.add('active-btn')
 function displayProducts(products) {
     const productList = document.getElementById('productList')
     productList.innerHTML = ''
