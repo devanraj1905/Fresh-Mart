@@ -64,9 +64,9 @@ async function loadproduct() {
         document.getElementById('productList').style.display = 'none'
 
         const response = await fetch('https://fresh-mart-5um5.onrender.com/products')
-        console.log('Status:', response.status) 
+   
         const data = await response.json()
-        console.log('Data:', data)              
+                   
         allProduct = data
         setTimeout(()=>{
             
